@@ -9,9 +9,9 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: DashboardScreenBody(),
-      floatingActionButton: IconButton(
-        color: Theme.of(context).primaryColor,
-        icon: Icon(Icons.add),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.indigo,
+        child: Icon(Icons.add),
         onPressed: () {
           Navigator.pushNamed(context, AddTaskScreen.id);
         },

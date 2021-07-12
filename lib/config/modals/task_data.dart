@@ -7,9 +7,7 @@ import 'package:mt_todo_app/config/modals/task.dart';
 
 class TaskData extends ChangeNotifier {
   List<Task> _tasks = [];
-  UnmodifiableListView<Task> get tasks {
-    return UnmodifiableListView(_tasks);
-  }
+  UnmodifiableListView<Task> get tasks => UnmodifiableListView(_tasks);
 
   getTasks() async {
     Box<Task> box = await Hive.openBox<Task>(kTaskDataHiveBox);
